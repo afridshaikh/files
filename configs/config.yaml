@@ -1,0 +1,45 @@
+seed: 42
+
+simulation:
+  days: 30
+  interval_minutes: 15
+
+network:
+  zones: 4
+  nodes_per_zone: 25
+  base_elevation_m: 20.0
+  elevation_variation_m: 12.0
+  reservoir_head_m: 70.0
+
+ranges:
+  flow_m3h:
+    min: 0.0
+    max: 1500.0
+  pressure_bar:
+    min: 0.0
+    max: 15.0
+  chlorine_mg_l:
+    min: 0.0
+    max: 2.5
+  ph:
+    min: 6.5
+    max: 8.5
+  turbidity_ntu:
+    min: 0.0
+    max: 5.0
+  temperature_c:
+    min: 0.0
+    max: 40.0
+
+sensor:
+  noise_std_fraction:
+    flow_m3h: 0.02
+    pressure_bar: 0.01
+    chlorine_mg_l: 0.03
+    ph: 0.005
+    turbidity_ntu: 0.04
+    temperature_c: 0.01
+
+  missing_probability: 0.02
+  outlier_probability: 0.005
+  outlier_multiplier: 2.5
